@@ -33,4 +33,69 @@
   padding: 8px 16px;
 }
 
+/*******************************************
+----------- Intro
+*******************************************/
+.intro {
+  width: 100%;
+  text-align: center;
+}
+.intro .btn {
+  margin: auto;
+  margin-top: 25px;
+}
+.intro .btn a {
+  text-transform: none;
+  color: black;
+  padding: 12px;
+  background-color: transparent;
+  border: 2px solid red;
+}
+
+/*******************************************
+----------- Solutions
+*******************************************/
+.solutions {
+  width: 100%;
+  text-align: center;
+}
+.solutions__cards {
+  display: flex;
+  width: 55%;
+  margin: auto;
+}
+.solutions__cards-basic, .solutions__cards-premium {
+  border: 2px solid black;
+  width: 100%;
+  margin: 5px;
+}
+.solutions__cards-basic .head h1, .solutions__cards-premium .head h1 {
+  margin: 0;
+  background-color: red;
+}
+.solutions__cards-basic .body p, .solutions__cards-premium .body p {
+  padding: 0 50px;
+}
+.solutions__cards-basic .begin, .solutions__cards-premium .begin {
+  background-color: red;
+}
+
+/*******************************************
+----------- Blog
+*******************************************/
+.blog {
+  width: 100%;
+  text-align: center;
+}
+.blog__posts {
+  display: flex;
+  width: 75%;
+  margin: auto;
+}
+.blog__posts-item {
+  width: 70%;
+  background-color: red;
+  margin: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */
