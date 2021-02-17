@@ -2,7 +2,22 @@
 ----------- Utilities
 *******************************************/
 
-
+/// Mixin to prefix a property
+/// @author Hugo Giraudel
+/// @param {String} $property - Property name
+/// @param {*} $value - Property value
+/// @param {List} $prefixes (()) - List of prefixes to print
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+// exemple
+.selector {
+  @include prefix(transform, rotate(45deg), webkit ms);
+}
 
 /******* Containers *******/
 .container {
@@ -11,10 +26,51 @@
   margin: 0 auto;
 }
 
+/******* Font *******/
+
+.heading {
+
+}
+
+.h1 {
+
+}
+
+.h2 {
+
+}
+
+.h3 {
+
+}
+
+.txt {
+
+}
+
+/******* Button *******/
+
+.btn {
+
+}
+
+.btn-main {
+
+}
+
+.btn-second {
+
+}
+
 
 /*******************************************
 ----------- Header
 *******************************************/
+
+.header {
+  padding: 16px 0;
+}
+
 .header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -35,4 +91,51 @@
     display: block;
     padding: 8px 16px;
   }
+}
+
+
+/*******************************************
+----------- Banner
+*******************************************/
+
+.banner {
+  padding: 64px 0;
+}
+
+.banner__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10%;
+  align-items: center;
+}
+
+
+/*******************************************
+----------- Help
+*******************************************/
+
+.help {
+  padding: 64px 0;
+}
+
+.help__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10%;
+  align-items: center;
+}
+
+
+/*******************************************
+----------- Footer
+*******************************************/
+
+.footer {
+  padding: 64px 0;
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10%;
 }

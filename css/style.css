@@ -1,6 +1,12 @@
 /*******************************************
 ----------- Utilities
 *******************************************/
+.selector {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 /******* Containers *******/
 .container {
   width: 1140px;
@@ -8,9 +14,15 @@
   margin: 0 auto;
 }
 
+/******* Font *******/
+/******* Button *******/
 /*******************************************
 ----------- Header
 *******************************************/
+.header {
+  padding: 16px 0;
+}
+
 .header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -31,6 +43,47 @@
 .header__nav-item a {
   display: block;
   padding: 8px 16px;
+}
+
+/*******************************************
+----------- Banner
+*******************************************/
+.banner {
+  padding: 64px 0;
+}
+
+.banner__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10%;
+  align-items: center;
+}
+
+/*******************************************
+----------- Help
+*******************************************/
+.help {
+  padding: 64px 0;
+}
+
+.help__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10%;
+  align-items: center;
+}
+
+/*******************************************
+----------- Footer
+*******************************************/
+.footer {
+  padding: 64px 0;
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10%;
 }
 
 /*# sourceMappingURL=style.css.map */
