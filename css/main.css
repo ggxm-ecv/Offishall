@@ -19,6 +19,7 @@ html {
 
 a {
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 img {
@@ -30,6 +31,10 @@ ul, ol {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+p {
+  margin: 0;
 }
 
 /*

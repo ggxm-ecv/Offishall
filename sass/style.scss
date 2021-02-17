@@ -48,18 +48,42 @@
 
 }
 
+.txt-small {
+
+}
+
 /******* Button *******/
 
 .btn {
-
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid;
+  border-radius: 4px;
 }
 
 .btn-main {
-
+  border-color: #111;
+  background-color: #111;
+  color: #fff;
+  &:hover {
+    background-color: #fff;
+    color: #111;
+  }
 }
 
 .btn-second {
+  border-color: #111;
+  background-color: #fff;
+  color: #111;
+}
 
+.btn-full {
+  width: 100%;
+  text-align: center;
+}
+
+.link {
+  text-decoration: underline;
 }
 
 
@@ -93,7 +117,6 @@
   }
 }
 
-<<<<<<< HEAD
 
 /*******************************************
 ----------- Banner
@@ -110,6 +133,144 @@
   align-items: center;
 }
 
+.banner__content a:not(:first-of-type) {
+  margin-left: 8px;
+}
+
+
+/*******************************************
+----------- Intro
+*******************************************/
+
+.intro {
+  padding: 64px 0;
+  .heading, .txt {
+    text-align: center;
+  }
+}
+
+.intro__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro__wrap-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10%;
+  margin-top: 32px;
+}
+
+.intro__btn {
+  margin-top: 32px;
+}
+
+
+/*******************************************
+----------- Prices
+*******************************************/
+
+.prices {
+  padding: 64px 0;
+  .heading {
+    text-align: center;
+  }
+}
+
+.prices__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 32px;
+  width: 656px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.prices__card {
+  background-color: #eee;
+  padding: 16px;
+  .prices__card-icon {
+    display: block;
+    max-width: 100px;
+    margin: 0 auto;
+  }
+}
+
+.prices__card-items {
+  margin-top: 32px;
+  padding: 0 32px;
+}
+
+.prices__card-item {
+  display: flex;
+  &:not(:first-child) {
+    margin-top: 16px;
+  }
+  &.not-include {
+    opacity: 0.4;
+  }
+  img {
+    width: 16px;
+    height: auto;
+  }
+  .txt {
+    margin-left: 16px;
+  }
+}
+
+.prices__card-price {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.prices__wrap-cta {
+  width: 80%;
+  margin: 32px auto 0 auto;
+  .btn {
+    text-align: center;
+  }
+}
+
+
+/*******************************************
+----------- Reviews
+*******************************************/
+
+.reviews {
+  padding: 64px 0;
+  background-color: #F2F2F2;
+  .heading {
+    text-align: center;
+  }
+}
+
+.reviews__brands {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 32px;
+  margin-top: 32px;
+}
+
+.reviews__brand {
+  text-align: center;
+  img {
+    width: 180px;
+  }
+}
+
+.reviews__wrap-reviews {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 32px;
+  margin-top: 32px;
+}
+
+.reviews__review {
+  padding: 16px;
+  background-color: #C4C4C4;
+}
+
 
 /*******************************************
 ----------- Help
@@ -121,9 +282,48 @@
 
 .help__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   column-gap: 10%;
   align-items: center;
+}
+
+.help__cta {
+  margin-top: 32px;
+}
+
+
+/*******************************************
+----------- Blog
+*******************************************/
+
+.blog {
+  padding: 64px 0;
+}
+
+.blog__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog__title,
+.blog__description {
+  text-align: center;
+}
+
+.blog__posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 16px;
+  margin-top: 32px;
+}
+
+.blog__post-cta {
+  margin-top: 32px;
+}
+
+.blog__cta {
+  margin-top: 32px;
 }
 
 
@@ -140,69 +340,3 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 10%;
 }
-=======
-/*******************************************
------------ Intro
-*******************************************/
-.intro {
-  width: 100%;
-  text-align: center;
-  .btn {
-    margin: auto;
-    margin-top: 25px;
-    a {
-      text-transform: none;
-      color: black;
-      padding: 12px;
-      background-color: transparent;
-      border: 2px solid red;
-    }
-  }
-}
-
-/*******************************************
------------ Solutions
-*******************************************/
-.solutions {
-  width: 100%;
-  text-align: center;
-  &__cards {
-    display: flex;
-    width: 55%;
-    margin: auto;
-    &-basic,&-premium {
-      border: 2px solid black;
-      width: 100%;
-      margin: 5px;
-      .head h1 {
-        margin: 0;
-        background-color: red;
-      }
-      .body p {
-        padding: 0 50px;
-      }
-      .begin {
-        background-color: red;
-      }
-    }
-  }
-}
-
-/*******************************************
------------ Blog
-*******************************************/
-.blog {
-  width: 100%;
-  text-align: center;
-  &__posts {
-    display: flex;
-    width: 75%;
-    margin: auto;
-    &-item {
-      width: 70%;
-      background-color: red;
-      margin: 5px;
-    }
-  }
-}
->>>>>>> 58a117629de3ae889d224e63399798776afe2521
