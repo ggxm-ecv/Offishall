@@ -93,6 +93,7 @@
   }
 }
 
+<<<<<<< HEAD
 
 /*******************************************
 ----------- Banner
@@ -139,3 +140,69 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 10%;
 }
+=======
+/*******************************************
+----------- Intro
+*******************************************/
+.intro {
+  width: 100%;
+  text-align: center;
+  .btn {
+    margin: auto;
+    margin-top: 25px;
+    a {
+      text-transform: none;
+      color: black;
+      padding: 12px;
+      background-color: transparent;
+      border: 2px solid red;
+    }
+  }
+}
+
+/*******************************************
+----------- Solutions
+*******************************************/
+.solutions {
+  width: 100%;
+  text-align: center;
+  &__cards {
+    display: flex;
+    width: 55%;
+    margin: auto;
+    &-basic,&-premium {
+      border: 2px solid black;
+      width: 100%;
+      margin: 5px;
+      .head h1 {
+        margin: 0;
+        background-color: red;
+      }
+      .body p {
+        padding: 0 50px;
+      }
+      .begin {
+        background-color: red;
+      }
+    }
+  }
+}
+
+/*******************************************
+----------- Blog
+*******************************************/
+.blog {
+  width: 100%;
+  text-align: center;
+  &__posts {
+    display: flex;
+    width: 75%;
+    margin: auto;
+    &-item {
+      width: 70%;
+      background-color: red;
+      margin: 5px;
+    }
+  }
+}
+>>>>>>> 58a117629de3ae889d224e63399798776afe2521
