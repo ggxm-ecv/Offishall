@@ -2,6 +2,8 @@
 ----------- Utilities
 *******************************************/
 
+
+
 /******* Containers *******/
 .container {
   width: 1140px;
@@ -13,7 +15,7 @@
 /*******************************************
 ----------- Header
 *******************************************/
-.header {
+.header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
