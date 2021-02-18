@@ -250,7 +250,7 @@
   align-items: center;
   height: 60vh;
   padding: 64px 0;
-  background: linear-gradient(180deg, transparent 0, #FCF6F2 8%, #FCF6F2 94%, transparent 100%);
+  background: linear-gradient(180deg, #FCF6F2 0%, #FCF6F2 94%, transparent 100%);
 }
 
 .banner__wrapper {
