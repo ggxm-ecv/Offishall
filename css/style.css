@@ -1,12 +1,37 @@
 /*******************************************
 ----------- Utilities
 *******************************************/
-.selector {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+/******* Fonts *******/
+/* Kobe */
+@font-face {
+  font-family: "Kobe";
+  src: url("../fonts/Kobe-Regular.eot");
+  src: url("../fonts/Kobe-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Kobe-Regular.woff2") format("woff2"), url("../fonts/Kobe-Regular.woff") format("woff"), url("../fonts/Kobe-Regular.ttf") format("truetype"), url("../fonts/Kobe-Regular.svg#Kobe-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
 }
-
+/* Gilroy */
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.eot");
+  src: url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype"), url("../fonts/Gilroy-Regular.svg#Gilroy-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.eot");
+  src: url("../fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("truetype"), url("../fonts/Gilroy-Medium.svg#Gilroy-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Bold.eot");
+  src: url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("truetype"), url("../fonts/Gilroy-Bold.svg#Gilroy-Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
 /******* Containers *******/
 .container {
   width: 1140px;
@@ -16,33 +41,116 @@
 
 .container-xsmall {
   width: 680px;
-  max-width: 90%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
 /******* Font *******/
+.heading {
+  font-family: "Kobe";
+}
+
+.h1 {
+  font-size: 64px;
+  line-height: 64px;
+}
+
+.txt {
+  font-family: "Gilroy";
+  font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .h1 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .txt {
+    font-size: 14px;
+  }
+}
+.underline {
+  position: relative;
+}
+.underline::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 90%;
+  height: 100%;
+  background: top/contain no-repeat url("../img/underline.png");
+}
+
 /******* Button *******/
 .btn {
   display: inline-block;
-  padding: 8px 16px;
-  border: 2px solid;
-  border-radius: 4px;
+  font-family: "Gilroy";
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 150ms ease-out;
 }
 
 .btn-main {
-  border-color: #111;
-  background-color: #111;
-  color: #fff;
+  padding: 8px 28px;
+  border: 2px solid;
+  border-radius: 4px;
+  border-color: #EB9E71;
+  background-color: #fff;
+  color: #EB9E71;
 }
 .btn-main:hover {
-  background-color: #fff;
-  color: #111;
+  background-color: #EB9E71;
+  color: #fff;
 }
 
 .btn-second {
-  border-color: #111;
-  background-color: #fff;
-  color: #111;
+  position: relative;
+  color: #EB9E71;
+}
+.btn-second::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 90%;
+  height: 100%;
+  background: top/contain no-repeat url("../img/underline-orange.png");
+}
+.btn-second::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 20px;
+  height: 18px;
+  margin-left: 32px;
+  opacity: 0;
+  background: center/contain no-repeat url("../img/arrow-right-orange.png");
+  transition: all 150ms ease-out;
+}
+.btn-second:hover::after {
+  margin-left: 16px;
+  opacity: 1;
 }
 
 .btn-full {
@@ -58,7 +166,7 @@
 ----------- Header
 *******************************************/
 .header {
-  padding: 16px 0;
+  padding: 32px 0;
 }
 
 .header__wrapper {
@@ -79,29 +187,42 @@
   margin-left: 0;
 }
 .header__nav-item a {
+  position: relative;
   display: block;
   padding: 8px 16px;
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-weight: 500;
+  color: #202020;
+}
+.header__nav-item a.btn {
+  color: #EB9E71;
+}
+.header__nav-item a.btn:hover {
+  color: #fff;
+}
+.header__nav-item a span {
+  position: relative;
+}
+.header__nav-item a span::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #202020;
+  transition: all 200ms ease-out;
+}
+.header__nav-item a span:hover::before {
+  width: 100%;
+  right: auto;
+  left: 0;
 }
 
 /*******************************************
 ----------- Banner
 *******************************************/
-.banner {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 60vh;
-  padding: 64px 0;
-  background-color: #FCF6F2;
-}
-
-.banner__wrapper {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /*** Background ***/
 .banner__background {
   z-index: 0;
@@ -116,10 +237,57 @@
 
 .banner__background-circle {
   opacity: 0;
-  transition: opacity 200ms ease-out;
+  transition: opacity 150ms ease-out;
 }
 .banner__background-circle.active {
   opacity: 1;
+}
+
+/*** End Background ***/
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60vh;
+  padding: 64px 0;
+  background: linear-gradient(180deg, transparent 0, #FCF6F2 8%, #FCF6F2 94%, transparent 100%);
+}
+
+.banner__wrapper {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner__wrapper-title {
+  text-align: center;
+}
+
+.banner__wrapper-txt {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.banner__wrapper-btn-try {
+  margin-top: 32px;
+}
+
+.banner__wrapper-btn-more {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+@media screen and (max-width: 800px) {
+  .banner__wrapper-btn-more {
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
 }
 
 /*******************************************

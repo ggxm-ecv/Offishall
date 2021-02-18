@@ -20,22 +20,24 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <meta name="theme-color" content="#111111">
+  <meta name="theme-color" content="#202020">
 </head>
 
 <body>
 
   <header class="header">
     <div class="header__wrapper container">
-      <img class="header__logo" src="img/placeholder-image.png" alt="Logo Offishall">
+      <div class="header__wrap-logo">
+        <img class="header__logo" src="img/logo_160x.png" alt="Logo Offishall">
+      </div>
       <nav class="header__nav">
         <ul class="header__nav-items">
-          <li class="header__nav-item"><a href="/">Accueil</a></li>
-          <li class="header__nav-item"><a href="/solution.html">Notre Solution</a></li>
-          <li class="header__nav-item"><a href="#prices">Tarifs</a></li>
-          <li class="header__nav-item"><a href="/a-propos.html">À Propos</a></li>
-          <li class="header__nav-item"><a href="/blog.html">Blog</a></li>
-          <li class="header__nav-item"><a href="/contact.html">Contact</a></li>
+          <li class="header__nav-item"><a href="/"><span>Accueil</span></a></li>
+          <li class="header__nav-item"><a href="/solution.html" class="btn btn-main">Notre Solution</a></li>
+          <li class="header__nav-item"><a href="#prices"><span>Tarifs</span></a></li>
+          <li class="header__nav-item"><a href="/a-propos.html"><span>À Propos</span></a></li>
+          <li class="header__nav-item"><a href="/blog.html"><span>Blog</span></a></li>
+          <li class="header__nav-item"><a href="/contact.html"><span>Contact</span></a></li>
         </ul>
       </nav>
     </div>
@@ -50,15 +52,16 @@
           <stop offset="1" stop-color="white" stop-opacity="0"/>
         </radialGradient>
         <mask id="mask">
-          <circle id="c" class="banner__background-circle" cx="0" cy="0" r="160" fill="url(#radGrad)"
+          <circle id="c" class="banner__background-circle active" cx="20%" cy="50%" r="20%" fill="url(#radGrad)"
            stroke-width="6" stroke-dasharray="6.28"/>
         </mask>
         <image xlink:href="img/banner-bg.png" width="100%" height="100%" x="0" y="0" preserveAspectRatio="xMinYMin slice" mask="url(#mask)" />
       </svg>
       <div class="banner__wrapper container-xsmall">
-        <h1 class="heading h1">Percevoir ses émotions&nbsp;: la clé de son organisation</h1>
-        <p class="txt">Découvrez une nouvelle façon de gérer vie professionnelle et personnelle</p>
-        <a href="#" class="btn btn-main">Essayer</a>
+        <h1 class="banner__wrapper-title heading h1">Percevoir ses émotions&nbsp;: la&nbsp;clé de son <span class="underline">organisation</span></h1>
+        <p class="banner__wrapper-txt txt">Appropriez-vous le seul outil pour gérer votre équilibre de vie</p>
+        <a href="#" class="banner__wrapper-btn-try btn btn-main">Essayer</a>
+        <a href="#" class="banner__wrapper-btn-more btn btn-second">En savoir plus</a>
       </div>
     </div>
 
