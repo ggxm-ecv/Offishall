@@ -107,9 +107,10 @@
 }
 
 .h4 {
-  font-size: 39px;
+  font-size: 38px;
+  line-height: 38px;
   color: white;
-  margin: 0 20px 0 0;
+  margin: 0;
 }
 
 .h5 {
@@ -153,6 +154,11 @@
 
   .h3 {
 
+  }
+
+  .h4 {
+    font-size: 18px;
+    line-height: 18px;
   }
 
   .txt {
@@ -485,23 +491,21 @@
 *******************************************/
 
 .intro {
-  padding: 64px 0 220px;
+  padding: 64px 0;
   background-color: #EB9E71;
-  .heading, .txt {
-    text-align: center;
-  }
 }
 
 .intro__wrapper {
   display: flex;
   justify-content: space-between;
-  max-width: 80%;
-  margin: auto;
+  align-items: center;
   @media screen and (max-width: 1300px) {
     flex-direction: column;
   }
   .title-left {
     width: 35%;
+    color: #fff;
+    text-align: center;
     @media screen and (max-width: 1300px) {
       width: 100%;
     }
@@ -533,13 +537,18 @@
   }
   .intro__item {
     display: flex;
-    margin: 35px 0;
+    align-items: center;
+    &:not(:first-child) {
+      margin-top: 64px;
+      @media screen and (max-width: 800px) {
+        margin-top: 32px;
+      }
+    }
     @media screen and (max-width: 700px) {
       flex-direction: column;
       align-items: center;
     }
     &-txt {
-      width: 50%;
       color: white;
       margin-left: 50px;
       @media screen and (max-width: 1200px) {
@@ -547,6 +556,7 @@
       }
       @media screen and (max-width: 700px) {
         text-align: center;
+        margin: 16px 0 0 0;
       }
     }
     img {
@@ -554,6 +564,10 @@
       height: 153px;
     }
   }
+}
+
+.intro__item-txt .txt-small {
+  margin-top: 16px;
 }
 
 .intro__btn {
@@ -567,6 +581,7 @@
 
 .prices {
   padding: 64px 0;
+  background: linear-gradient(180deg, #EB9E71 200px, transparent 200px);
   .heading {
     text-align: center;
   }
@@ -578,14 +593,10 @@
 
 .prices__cards {
   display: flex;
-  width: 75%;
-  height: 685px;
+  width: 80%;
   max-width: 100%;
   background-color: #FCF6F2;
   margin: 0 auto;
-  position: absolute;
-  top: -210px;
-  left: 13%;
   @media screen and (max-width: 950px) {
     flex-direction: column;
     height: auto;
@@ -627,6 +638,7 @@
     @media screen and (max-width: 950px) {
       position: relative;
       bottom: 0;
+      margin-top: 32px;
     }
   }
 }
@@ -656,6 +668,7 @@
 
 .prices__card-price {
   margin-top: 32px;
+  font-family: 'Kobe';
   text-align: center;
   font-size: 43px;
   text-transform: uppercase;
@@ -682,12 +695,9 @@
 *******************************************/
 
 .reviews {
-  padding: 450px 0 64px;
+  padding: 64px 0;
   @media screen and (max-width: 1200px) {
     padding-bottom: 0;
-  }
-  @media screen and (max-width: 950px) {
-    padding: 650px 0 64px;
   }
   .heading {
     text-align: center;
@@ -736,6 +746,7 @@
       display: flex;
       flex-direction: column;
       margin-left: 20px;
+      font-family: 'Gilroy';
     }
   }
   .txt {
@@ -836,6 +847,7 @@
         }
       }
       &-txt {
+        font-weight: 500;
         @media screen and (max-width: 1200px) and (min-width: 800px) {
           padding: 10px;
         }
