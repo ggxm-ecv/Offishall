@@ -87,7 +87,8 @@
 /******* Font *******/
 
 .heading {
-  font-family: 'Kobe'
+  font-family: 'Kobe';
+  font-weight: 400;
 }
 
 .h1 {
@@ -96,7 +97,8 @@
 }
 
 .h2 {
-
+  font-size: 56px;
+  line-height: 56px;
 }
 
 .h3 {
@@ -119,7 +121,8 @@
   }
 
   .h2 {
-
+    font-size: 22px;
+    line-height: 22px;
   }
 
   .h3 {
@@ -390,6 +393,60 @@
 
 
 /*******************************************
+----------- Presentation
+*******************************************/
+
+.presentation {
+  padding: 64px 0;
+}
+
+.presentation__title {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+  color: #EB9E71;
+  @media screen and (max-width: 800px) {
+    text-align: center;
+  }
+}
+
+.presentation__content {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 64px;
+  @media screen and (max-width: 800px) {
+    margin-top: 32px;
+  }
+}
+
+.presentation__content-txt {
+  position: relative;
+  width: 60%;
+  max-width: 100%;
+  line-height: 42px;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    text-align: center;
+    line-height: 24px;
+  }
+}
+
+.presentation__bg-circle {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  @include prefix(transform, translate(-50%,-50%), webkit moz ms o);
+  width: 280px;
+  height: 280px;
+  background: center / contain no-repeat url('../img/circle.png');
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+}
+
+
+/*******************************************
 ----------- Intro
 *******************************************/
 
@@ -598,8 +655,8 @@
     top: 50%;
     left: 50%;
     @include prefix(transform, translate(-50%,-50%), webkit moz ms o);
-    width: 280px;;
-    height: 280px;;
+    width: 280px;
+    height: 280px;
     background: center / contain no-repeat url('../img/circle.png');
     @media screen and (max-width: 960px) {
       display: none;
