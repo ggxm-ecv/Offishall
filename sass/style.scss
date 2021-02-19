@@ -198,12 +198,13 @@
   padding: 8px 28px;
   border: 2px solid;
   border-radius: 4px;
-  border-color: #EB9E71;
-  background-color: #fff;
-  color: #EB9E71;
+  border-color: transparent;
+  background-color: #EB9E71;
+  color: #fff;
   &:hover {
-    background-color: #EB9E71;
-    color: #fff;
+    background-color: #fff;
+    color: #EB9E71;
+    border: 2px solid #EB9E71;
   }
 }
 
@@ -275,7 +276,7 @@
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1020px) {
   .header__nav {
     display: none;
   }
@@ -296,9 +297,9 @@
     font-weight: 500;
     color: #202020;
     &.btn {
-      color: #EB9E71;
+      color: #fff;
       &:hover {
-        color: #fff;
+        color: #EB9E71;
       }
     }
     span {
@@ -326,7 +327,7 @@
 
 .header__wrap-btn-menu {
   display: none;
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1020px) {
     display: block;
   }
 }
@@ -626,7 +627,7 @@
     bottom: 30px;
     @media screen and (max-width: 950px) {
       position: relative;
-      bottom: 0;
+      bottom: -20px;
     }
   }
 }
@@ -667,8 +668,11 @@
   a {
     color: black;
   }
-  img {
-    margin-left: 20px;
+  .btn-second::before {
+    background: top/contain no-repeat url("../img/underline.png");
+  }
+  .btn-second::after {
+    background: top/contain no-repeat url("../img/arrow.png");
   }
 }
 
@@ -832,13 +836,20 @@
         @media screen and (max-width: 800px) {
           position: relative;
           top: -10px;
-          left: 0;
+          left: -10px;
         }
       }
       &-txt {
         @media screen and (max-width: 1200px) and (min-width: 800px) {
           padding: 10px;
+          text-align: center;
         }
+        @media screen and (max-width: 800px) {
+          width: auto;
+          margin: auto;
+          text-align: center;
+        }
+
       }
       a {
         color: black;
@@ -859,12 +870,18 @@
     margin-top: 50px;
 
   }
-  .sousligne {
-    position: absolute;
-    bottom: -15px;
-    left: -5px;
-    width: 100px;
+  // .sousligne {
+  //   position: absolute;
+  //   bottom: -15px;
+  //   left: -5px;
+  //   width: 100px;
+  // }
+  .btn-second::before {
+    background: top/contain no-repeat url("../img/underline.png");
   }
+  .btn-second::after {
+    background: top/contain no-repeat url("../img/arrow.png");
+  } 
 }
 
 .blog__post-cta {
