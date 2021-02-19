@@ -210,6 +210,7 @@
 
 .link {
   text-decoration: underline;
+  color:#EB9E71;
 }
 
 
@@ -523,26 +524,6 @@
 
 
 /*******************************************
------------ Help
-*******************************************/
-
-.help {
-  padding: 64px 0;
-}
-
-.help__wrapper {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  column-gap: 10%;
-  align-items: center;
-}
-
-.help__cta {
-  margin-top: 32px;
-}
-
-
-/*******************************************
 ----------- Blog
 *******************************************/
 
@@ -575,6 +556,55 @@
 
 .blog__cta {
   margin-top: 32px;
+}
+
+
+/*******************************************
+----------- Help
+*******************************************/
+
+.help {
+  padding: 64px 0;
+}
+
+.help__wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 10%;
+  align-items: center;
+  @media screen and (max-width: 960px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.help__title {
+  margin: 0;
+}
+
+.help__txt {
+  margin-top: 16px;
+}
+
+.help__wrap-cta {
+  text-align: center;
+}
+
+.help__cta {
+  position: relative;
+  margin-top: 32px;
+  .help__cta-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include prefix(transform, translate(-50%,-50%), webkit moz ms o);
+    width: 280px;;
+    height: 280px;;
+    background: center / contain no-repeat url('../img/circle.png');
+    @media screen and (max-width: 960px) {
+      display: none;
+    }
+  }
 }
 
 
